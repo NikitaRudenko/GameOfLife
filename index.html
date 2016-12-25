@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game of Life</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body class="b-page">
+
+	<div class="header header_size_m b-page__section">
+		<div class="title clearfix">
+			<div class="title__word title__word_indent_s title__word_type_y">Game</div>
+			<div class="title__word title__word_indent_s">of</div>
+			<div class="title__word title__word_indent_s title__word_type_y">Life</div>
+		</div>
+		<div class="controls clearfix">
+			<div class="controls__button controls__play"></div>
+			<div class="controls__button controls__pause"></div>
+		</div>
+		<div class="score clearfix">
+			<div class="score__title score__section title__word_type_y">Time:</div>
+			<div class="score__result score__result_type_step score__section">0</div>
+			<div class="score__title score__section title__word_type_y">Population:</div>
+			<div class="score__result score__result_type_population score__section">0</div>
+		</div>
+	</div>
+
+	<div class="content b-page__section">
+		<div class="canvas content__item"></div>
+		<div class="history content__item clearfix"></div>
+	</div>
+	
+	<script type="text/template" id="history-item">
+		<div class="history__item clearfix">
+			<div class="history__group">
+				<div class="history__name">Step:</div>
+				<div class="history__value" title="<%- step %>"><%- step %></div>
+			</div>
+			<div class="history__group">
+				<div class="history__name">Population:</div>
+				<div class="history__value" title="<%- population %>"><%- population %></div>
+			</div>
+		</div>
+	</script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.17.3/lodash.min.js"></script>
+	<script type="text/javascript" src="./assets/js/index.js"></script>
+</body>
+</html>
